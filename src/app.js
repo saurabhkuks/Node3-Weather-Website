@@ -1,9 +1,10 @@
 const path=require('path')
 const express=require('express')
 const hbs=require('hbs')
-const { response } = require('express')
+
 
 const app=express()
+const port=process.env.PORT || 3000
 
 //Define paths for express config
 const publicDirectoryPath=path.join(__dirname,'../public')
@@ -123,6 +124,6 @@ app.get('*',(req,res)=>{
 // })
 
 
-app.listen(3000,()=>{
-    console.log('Server is running at 3000')
+app.listen(port,()=>{
+    console.log('Server is running at '+port)
 })

@@ -7,9 +7,9 @@ const foreCast=(longitude,latitude,callback)=>{
         if(error){
             callback('Some connection serivce error',undefined)
         }else if(body.error){
-            callback('Unable to find location',undefined)
+            callback('Unable to find the given location....Please try other One',undefined)
         }else{
-            callback(undefined,'Current temperature is '+body.current.temperature)
+            callback(undefined,'Current temperature of the place is '+body.current.temperature +' Fahrenheit')
         }
     })
 }
